@@ -38,6 +38,9 @@ Design a **Vector Processing Unit (VPU)** capable of:
 - **Memory-mapped I/O:** For loading vectors and executing operations
 
 ---
+## Vector vs Scalar Execution
+![image](https://github.com/user-attachments/assets/942db1c5-3f6b-4779-84b7-6f39c3d1a856)
+
 
 ## 🧾 Instruction Set
 
