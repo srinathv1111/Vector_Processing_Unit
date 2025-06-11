@@ -29,15 +29,6 @@ Design a **Vector Processing Unit (VPU)** capable of:
 
 ---
 
-## 🏗️ Architecture
-
-- **Vector Register Bank (VRB):** 8 registers × 8 elements
-- **Vector ALU:** 8 parallel ALU instances (Add/Sub/Mul)
-- **Vector Load Store Unit (VLS):** FSM-controlled memory interface
-- **Control Unit:** Handles standard and vector instructions (opcode = `1111111`)
-- **Memory-mapped I/O:** For loading vectors and executing operations
-
----
 ## Vector vs Scalar Execution
 ![image](https://github.com/user-attachments/assets/942db1c5-3f6b-4779-84b7-6f39c3d1a856)
 
