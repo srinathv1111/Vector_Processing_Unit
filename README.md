@@ -43,6 +43,25 @@ Design a **Vector Processing Unit (VPU)** capable of:
 
 - The above scalar code would take almost 600+ instructions to execute whereas if we vectorize it, it would take just 5 instructions to finish the program
 - With deep pipelining and parallel computing by using multiple ALUs, Vector execution would be consuming very less clock cycles compared to scalar execution
+- 
+---
+---
+## VPU Architecture
+![image](https://github.com/user-attachments/assets/39a34ba2-cd96-48fe-9482-9d554302546a)
+
+- 🏗 **VMIPS-based VPU design**: Modeled the VPU architecture with design cues from the VMIPS vector processor.
+- 📥 **Load/Store Unit**: Capable of fetching one 32-bit element at a time from memory and delivering it to the vector register bank.
+- 🧠 **Vector Register Bank**: 8 vector registers × 8 elements, supporting **16 read ports** and **8 write ports** for true parallelism.
+- ⚙️ **Vector ALU (VALU)**: Built using **8 parallel ALUs** for performing element-wise Add, Sub, and Mul operations simultaneously.
+- 🔀 **Vector Write Data MUX**: Selects data between Load/Store Unit and VALU for writeback into the register bank.
+- 📏 **Vector size is fixed at 8 elements** for simplicity.
+- 🧾 **VLR and VMR Registers**: 
+  - Register `x31` used as **Vector Length Register (VLR)**.
+  - Register `x30` used as **Vector Mask Register (VMR)**.
+- 🧩 **Integrated with RISC-V Core**: The VPU is fully connected with a RISC-V processor, allowing vector instructions to be fetched and executed through a unified instruction memory.
+
+---
+
 
 ## 🧾 Instruction Set
 
