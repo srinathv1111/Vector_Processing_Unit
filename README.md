@@ -89,6 +89,41 @@ Opcode: `1111111`, funct7: `0000001`
 Use standard `addi` instructions on registers `r31` (VLR) and `r30` (VMR)
 
 ---
+3.4	Instruction formats for RISC-V processor
+•	The processor provided will support the above instruction formats
+•	The opcodes, funct3 and funct7 values can be referred from the reference sheet
+3.5	Instruction format for Load.Vector Instruction: Load.V, Vd, [Rx]
+funct7	reserved	Rx (5-bit)	reserved	reserved	Vd (3-bit)	Opcode
+0000001	00000	xxxxx	000	00	xxx	1111111
+•	Load.V, Vd, [Rx] is the instruction where Rx holds the starting address of the vector elements and Vd is the destination vector register
+•	Since there are 8 vector registers, Vd can take any value between 0 to 7
+•	Rx can take any value between 1 to 30
+3.6	Instruction format for Add.Vector Instruction: Add.VV, Vd, Vx,Vy
+funct7	Reserved	Vy (3-bit)	Reserved	Vx(3-bit)	reserved	Vd (3-bit)	opcode
+0000000	00	xxx	00	xxx	00000	xxx	1111111
+•	Add.VV, Vd, Vx,Vy is the instruction where Vx holds the first vector elements, Vy holds the second vector elements and Vd is the destination vector register
+•	Element-wise Vx+Vy will be stored in Vd
+•	Since there are 8 vector registers, Vx, Vy, Vd can take any value between 0 to 7
+3.7	Instruction format for Sub.Vector Instruction: Sub.VV, Vd, Vx,Vy
+funct7	Reserved	Vy (3-bit)	Reserved	Vx(3-bit)	reserved	Vd (3-bit)	opcode
+0100000	00	xxx	00	xxx	00000	xxx	1111111
+•	Sub.VV, Vd, Vx,Vy is the instruction where Vx holds the first vector elements, Vy holds the second vector elements and Vd is the destination vector register
+•	Element-wise Vx-Vy will be stored in Vd
+•	Since there are 8 vector registers, Vx, Vy, Vd can take any value between 0 to 7
+3.8	Instruction format for Mul.Vector Instruction: Mul.VV, Vd, Vx,Vy
+funct7	Reserved	Vy (3-bit)	Reserved	Vx(3-bit)	reserved	Vd (3-bit)	opcode
+1100000	00	xxx	00	xxx	00000	xxx	1111111
+•	Mul.VV, Vd, Vx,Vy is the instruction where Vx holds the first vector elements, Vy holds the second vector elements and Vd is the destination vector register
+•	Element-wise Vx*Vy will be stored in Vd
+•	Since there are 8 vector registers, Vx can take any value between 0 to 7
+3.9	Instruction to change Vector Length (VLR) or Vector Mask(VMR):               addi R31/R30, r0, VL/VM;
+Imm[11:0]	rs1	funct3	rd	Opcode
+Vector Length or Mask	00000	000	30d or 31d	0010011
+•	This is the normal addi instruction from RISC-V ISA.
+•	By using addi instruction, we can change VMR or VLR.
+•	We have to use 30 for VMR and 31 for VLR
+•	The length or mask has to be given in the 12-bit Immediate field
+
 
 ## 🧪 How to Run
 
