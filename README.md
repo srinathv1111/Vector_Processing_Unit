@@ -62,6 +62,10 @@ Design a **Vector Processing Unit (VPU)** capable of:
 
 ---
 
+## Partial Datapath of VPU integrated with RISC V
+![image](https://github.com/user-attachments/assets/1f38d385-29b5-4f82-bbcc-cc5b24e18ac0)
+
+---
 
 ## 🧾 Instruction Set
 
