@@ -16,17 +16,6 @@ This repository contains the **design and integration of a Vector Processing Uni
 
 ---
 
-## 📚 Table of Contents
-
-- [Project Objective](#project-objective)
-- [Architecture](#architecture)
-- [Instruction Set](#instruction-set)
-- [Components](#components)
-- [Performance Summary](#performance-summary)
-- [How to Run](#how-to-run)
-- [Contributors](#contributors)
-
----
 
 ## 🎯 Project Objective
 
