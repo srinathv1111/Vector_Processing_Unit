@@ -40,8 +40,9 @@ Design a **Vector Processing Unit (VPU)** capable of:
 ---
 ## Vector vs Scalar Execution
 ![image](https://github.com/user-attachments/assets/942db1c5-3f6b-4779-84b7-6f39c3d1a856)
-The above scalar code would take almost 600+ instructions to execute whereas if we vectorize it, it would take just 5 instructions to finish the program
-With deep pipelining and parallel computing by using multiple ALUs, Vector execution would be consuming very less clock cycles compared to scalar execution
+
+- The above scalar code would take almost 600+ instructions to execute whereas if we vectorize it, it would take just 5 instructions to finish the program
+- With deep pipelining and parallel computing by using multiple ALUs, Vector execution would be consuming very less clock cycles compared to scalar execution
 
 ## 🧾 Instruction Set
 
