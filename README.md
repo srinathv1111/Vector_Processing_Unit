@@ -69,7 +69,7 @@ Design a **Vector Processing Unit (VPU)** capable of:
 
 ## 🧾 Instruction Set
 
-### 📥 3.5 Load.Vector Instruction: `Load.V Vd, [Rx]`
+### 📥 Load.Vector Instruction: `Load.V Vd, [Rx]`
 
 | funct7  | reserved | Rx (5-bit) | reserved | reserved | Vd (3-bit) | opcode   |
 |---------|----------|------------|----------|----------|------------|----------|
@@ -81,7 +81,7 @@ Design a **Vector Processing Unit (VPU)** capable of:
 
 ---
 
-### ➕ 3.6 Add.Vector Instruction: `Add.VV Vd, Vx, Vy`
+### ➕ Add.Vector Instruction: `Add.VV Vd, Vx, Vy`
 
 | funct7  | reserved | Vy (3-bit) | reserved | Vx (3-bit) | reserved | Vd (3-bit) | opcode   |
 |---------|----------|------------|----------|------------|----------|------------|----------|
@@ -92,7 +92,7 @@ Design a **Vector Processing Unit (VPU)** capable of:
 
 ---
 
-### ➖ 3.7 Sub.Vector Instruction: `Sub.VV Vd, Vx, Vy`
+### ➖ Sub.Vector Instruction: `Sub.VV Vd, Vx, Vy`
 
 | funct7  | reserved | Vy (3-bit) | reserved | Vx (3-bit) | reserved | Vd (3-bit) | opcode   |
 |---------|----------|------------|----------|------------|----------|------------|----------|
@@ -103,7 +103,7 @@ Design a **Vector Processing Unit (VPU)** capable of:
 
 ---
 
-### ✖️ 3.8 Mul.Vector Instruction: `Mul.VV Vd, Vx, Vy`
+### ✖️ Mul.Vector Instruction: `Mul.VV Vd, Vx, Vy`
 
 | funct7  | reserved | Vy (3-bit) | reserved | Vx (3-bit) | reserved | Vd (3-bit) | opcode   |
 |---------|----------|------------|----------|------------|----------|------------|----------|
@@ -114,7 +114,7 @@ Design a **Vector Processing Unit (VPU)** capable of:
 
 ---
 
-### 🛠️ 3.9 Setting Vector Length (VLR) or Vector Mask (VMR)
+### 🛠️ Setting Vector Length (VLR) or Vector Mask (VMR)
 
 **Instruction:** `addi R31/R30, x0, VL/VM`
 
